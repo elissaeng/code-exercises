@@ -1,5 +1,41 @@
+// Pyramid -> (i = 0) 
+//#region ---------------------------------------------------------------
 
-// Pyramid
+function pyramid(nums) {
+
+  // Initialize a variable to store the spaces and characters.
+  let result = '';
+
+  // Outer loop
+  for (let i = 0; i < nums; i++) {
+
+    // Inner loop - spaces
+    for (let j = 0; j < nums - i; j++) {
+
+      // Append a space to result.
+      result += ' ';
+    }
+
+    // Inner loop - characters
+    for (let k = 0; k < ((i + 1) * 2 - 1); k++) {
+      // Append the 'X' character to result.
+      result += 'X';
+    }
+
+    // new line
+    result += '\n';
+  }
+
+  return result;
+}
+
+console.log(pyramid(5));
+console.log(pyramid(9));
+
+//#endregion
+
+
+// Pyramid -> (i = 1)
 //#region ---------------------------------------------------------------
 
 // Create a function to print a pyramid with a single parameter.

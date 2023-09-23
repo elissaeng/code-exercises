@@ -1,3 +1,68 @@
+// Reversed Pyramid
+//#region ---------------------------------------------------------------
+
+// function reversedPyramid(nums) {
+  
+//   // Variable to hold the spaces and characters
+//   let result = '';
+
+//   // OUTER LOOP for number of rows
+//   for (let i = 0; i < nums; i++) {
+    
+//     // SPACES Inner Loop
+//     for (let j = 0; j < i; j++) {
+//       result += ' ';
+//     }
+
+//     // CHARACTERS Inner loop
+//     for (let k = 0; k < (nums - i) * 2 - 1; k++) {
+//       result += 'X';
+//     }
+
+//     result += '\n';
+//   }
+
+//   return result;
+
+// }
+
+// console.log(reversedPyramid(5));
+
+
+// STEPS
+// Write a function named 'reversedPyramid' with a single paramater named 'nums'.
+// 'nums' represents the number of desired rows.
+
+// Initialize a variable named 'result' and set it to an empty string. 'result' is used to hold the spaces and characters.
+
+// OUTER LOOP
+    // The outer loop determines how many rows there will be, which is dictated by the parameter 'nums'
+    // Initialize the variable 'i' to 0 and continue iterating up to 'nums'. 
+
+// INNER LOOPS
+
+    // SPACES Inner Loop:
+      // The spaces inner loop determines the number of trailing spaces on each consecutive row
+      // Set the variable 'j' to 0 and add spaces on each row until 'j' reaches 'i'
+        // Append a space to 'result'
+
+    // CHARACTERS Inner Loop;
+      // The characters inner loop determines the number of characters printed directly after the trailing spaces on each row.
+      // Initialize the variable 'k' to 0 
+      // Use the condition `k < (nums - i) * 2 - 1'
+      // `(nums - i)` represents the number of desired rows subtracted by 'i' which is the iterator of rows in the outer loop
+      // Multiply by 2 to account for the characters on the left side and the characters on the right side of the pyramid.
+      // Subtract 1 to maintain the shape of the reversed pyramid and ensure there is only 1 character 'X' at the point of the pyramid.
+        // Append the character 'X' to 'result'.
+
+// Once the inner loops are complete, append a new line to result in order to move to another row as the outer loop iterates.
+
+// Return 'result'
+        
+//#endregion
+
+
+
 // Pyramid -> (i = 0) 
 //#region ---------------------------------------------------------------
 

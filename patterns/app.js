@@ -62,7 +62,6 @@
 //#endregion
 
 
-
 // Pyramid -> (i = 0) 
 //#region ---------------------------------------------------------------
 
@@ -438,6 +437,72 @@ console.log(pyramid(7));
 // 6) Outer loop - move to the next row (append 'result' to '\n')
 
 // 7) Return 'result'
+
+//#endregion
+
+
+
+// Hollow Box 
+//#region -----------------------------------------------------------------
+
+function hollowBox(nums) {
+
+  // Variable to store the characters and spaces.
+  let result = '';
+
+  // OUTER LOOP: determines number of rows.
+  for (let i = 0; i < nums; i++) {
+
+    // INNER LOOP: determines characters or spaces within each row.
+    for (let j = 0; j < nums; j++) {
+
+      // Check if we are on the first row or last row, or on the first column or last. column
+      // If true, append an 'X' to 'result' to create the border of the box.
+      if (i === 0 || i === nums - 1 || j === 0 || j === nums - 1) {
+
+        result += 'X';
+      }
+      // If the above conditions are not true, append a space to 'result' to create the hollow interior space of the box.
+      else {
+
+        result += ' ';
+      }
+
+    }
+
+    // New line
+    result += '\n';
+  }
+
+  return result;
+}
+
+console.log(hollowBox(5));
+console.log(hollowBox(9));
+
+
+// STEPS
+// Write a function named hollowBox with a single parameter named 'nums'. 
+// 'nums' represents the desired number of rows.
+
+// Initialize a variable named 'result' and set it to an empty string. 'result' is where the spaces and characters will be stored.
+
+// OUTER LOOP
+  // The outer loop determines how many rows there are which is dictated by the paramater 'nums'
+  // Initialize the variable 'i' and set it to 0 
+  // Continue iterating until 'i' reaches 'nums'
+
+// INNER LOOP
+  // The inner loop determines the characters and spaces that make up the box.
+  // Initialize the variable 'j' and continue iterating until 'j' reaches 'nums'
+    // Write a condition statement for the characters:
+      // if 'i' (which represents rows) is equal to 0 (the first row) or 'nums - 1' (the last row), print 'X' characters.
+      // if 'j' (which represents the columns) is equal to 0 (the leftmost column) or 'nums - 1' (the rightmost column), print 'X' characters.
+          // if the above statements aren't true print a space. 
+
+// Once the inner loop is complete, after each row, append a new line character to 'result' in order to move to the next row.
+
+// return 'result'
 
 //#endregion
 

@@ -74,7 +74,7 @@ function pyramid(nums) {
   for (let i = 0; i < nums; i++) {
 
     // Inner loop - spaces
-    for (let j = 0; j < nums - i; j++) {
+    for (let j = 0; j < nums - i - 1; j++) {
 
       // Append a space to result.
       result += ' ';
@@ -103,37 +103,37 @@ console.log(pyramid(9));
 //#region ---------------------------------------------------------------
 
 // Create a function to print a pyramid with a single parameter.
-function pyramid(rows) {
+// function pyramid(rows) {
   
-  // Initialize a variable to store the spaces and characters.
-  let result = '';
+//   // Initialize a variable to store the spaces and characters.
+//   let result = '';
 
-  // OUTER LOOP: Determines the number of rows.
-  for (let i = 1; i <= rows; i++) {
+//   // OUTER LOOP: Determines the number of rows.
+//   for (let i = 1; i <= rows; i++) {
     
-    // INNER LOOP: Adds leading spaces based on the current row. 
-    for (let j = 0; j < rows - i; j++) {
+//     // INNER LOOP: Adds leading spaces based on the current row. 
+//     for (let j = 0; j < rows - i; j++) {
       
-      // Append a space to 'result'
-      result += ' ';
-    }
+//       // Append a space to 'result'
+//       result += ' ';
+//     }
 
-    // INNER LOOP for adding characters: Adds 'X' characters based on the current row.
-    for (let k = 0; k < i * 2 - 1; k++) {
+//     // INNER LOOP for adding characters: Adds 'X' characters based on the current row.
+//     for (let k = 0; k < i * 2 - 1; k++) {
       
-      // Append 'X' character to 'result'
-      result += 'X';
-    }
+//       // Append 'X' character to 'result'
+//       result += 'X';
+//     }
 
-    // Add a new line to start a new row.
-    result += '\n';
-  }
+//     // Add a new line to start a new row.
+//     result += '\n';
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(pyramid(5));
-console.log(pyramid(7));
+// console.log(pyramid(5));
+// console.log(pyramid(7));
 
 // STEPS
 // Create a function named 'pyramid' with a single parameter named 'rows'.
@@ -445,40 +445,40 @@ console.log(pyramid(7));
 // Hollow Box 
 //#region -----------------------------------------------------------------
 
-function hollowBox(nums) {
+// function hollowBox(nums) {
 
-  // Variable to store the characters and spaces.
-  let result = '';
+//   // Variable to store the characters and spaces.
+//   let result = '';
 
-  // OUTER LOOP: determines number of rows.
-  for (let i = 0; i < nums; i++) {
+//   // OUTER LOOP: determines number of rows.
+//   for (let i = 0; i < nums; i++) {
 
-    // INNER LOOP: determines characters or spaces within each row.
-    for (let j = 0; j < nums; j++) {
+//     // INNER LOOP: determines characters or spaces within each row.
+//     for (let j = 0; j < nums; j++) {
 
-      // Check if we are on the first row or last row, or on the first column or last. column
-      // If true, append an 'X' to 'result' to create the border of the box.
-      if (i === 0 || i === nums - 1 || j === 0 || j === nums - 1) {
+//       // Check if we are on the first row or last row, or on the first column or last. column
+//       // If true, append an 'X' to 'result' to create the border of the box.
+//       if (i === 0 || i === nums - 1 || j === 0 || j === nums - 1) {
 
-        result += 'X';
-      }
-      // If the above conditions are not true, append a space to 'result' to create the hollow interior space of the box.
-      else {
+//         result += 'X';
+//       }
+//       // If the above conditions are not true, append a space to 'result' to create the hollow interior space of the box.
+//       else {
 
-        result += ' ';
-      }
+//         result += ' ';
+//       }
 
-    }
+//     }
 
-    // New line
-    result += '\n';
-  }
+//     // New line
+//     result += '\n';
+//   }
 
-  return result;
-}
+//   return result;
+// }
 
-console.log(hollowBox(5));
-console.log(hollowBox(9));
+// console.log(hollowBox(5));
+// console.log(hollowBox(9));
 
 
 // STEPS
@@ -505,6 +505,7 @@ console.log(hollowBox(9));
 // return 'result'
 
 //#endregion
+
 
 
 // Box of repeated characters

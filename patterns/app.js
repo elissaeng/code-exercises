@@ -338,6 +338,36 @@ console.log(pyramid(9));
 //#endregion
 
 
+// Hollow right-angled triangle
+//#region ---------------------------------------------------------------
+
+function hollowTriangle(nums) {
+  
+  let result = '';
+
+  for (let i = 0; i < nums; i++) {
+    
+    for (let j = 0; j <= i; j++) {    
+
+      if (i === nums - 1 || j === 0 || j === i ) {
+
+        result += 'X';
+
+      }
+
+    }
+
+    result += '\n';
+  }
+
+  return result;
+}
+
+console.log(hollowTriangle(5));
+
+//#endregion
+
+
 
 // Right-angled triangle - 2
 //#region ---------------------------------------------------------------

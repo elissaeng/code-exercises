@@ -33,6 +33,49 @@ console.log(reverseHollowPyramid(5))
 
 //#endregion
 
+
+
+// Hollow Pyramid
+//#region ---------------------------------------------------------------
+
+// function hollowPyramid(nums) {
+
+//   let result = '';
+
+//   for (let i = 0; i < nums; i++) {
+    
+//     for (let j = 0; j < nums - 1 - i; j++) {
+
+//       result += ' '
+//     }
+
+//     for (let k = 0; k < (i + 1) * 2 - 1; k++) {
+      
+//       if (i === 0 || i === nums - 1) {
+//         result += 'X'
+//       }
+//       else if 
+//         (k === 0 || k === (i + 1) * 2 - 2) {
+//         result += 'X';
+//         }
+
+//         else {
+//           result += ' ';
+//         }
+//       }
+//       result += '\n';
+//     }
+
+//     return result;
+//   }
+      
+
+// console.log(hollowPyramid(5));
+
+//#endregion
+
+
+
 // Reversed Pyramid
 //#region ---------------------------------------------------------------
 

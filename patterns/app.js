@@ -1,3 +1,38 @@
+// Reversed hollow pyramid
+//#region ---------------------------------------------------------------
+function reverseHollowPyramid(nums) {
+
+  let result = '';
+
+  for (let i = 0; i < nums; i++) {
+    
+    for (let j = 0; j < i; j++) {
+
+      result += ' ';
+    }
+
+    for (let k = 0; k < (nums - i) * 2 - 1; k++) {
+
+      if (i === 0 || k === 0 || k === (nums - i) * 2 -2) {
+        result += 'X';
+      }
+      
+      else {
+        result += ' '
+      }
+    }
+
+    result += "\n";
+  }
+
+  return result;
+}
+
+
+console.log(reverseHollowPyramid(5))
+
+//#endregion
+
 // Reversed Pyramid
 //#region ---------------------------------------------------------------
 
@@ -340,7 +375,6 @@ console.log(pyramid(9));
 
 // Hollow right-angled triangle
 //#region ---------------------------------------------------------------
-
 function hollowTriangle(nums) {
   
   let result = '';

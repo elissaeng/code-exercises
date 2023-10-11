@@ -1,3 +1,48 @@
+// Diamond Pattern
+//#region ---------------------------------------------------------------
+function pyramid(nums) {
+
+  let result = '';
+
+  // Upright pyramid
+  for (let i = 0; i < nums; i++) {
+
+    // Spaces
+    for (let j = 0; j < nums - 1 - i; j++) {
+      result += ' ';
+    }
+    // Characters
+    for (let k = 0; k < i * 2 + 1; k++) {
+      result += 'X';
+    }
+
+    // Append a new line
+    result += '\n';
+  }
+
+  // Downward pyrmaid
+  for (let i = 0; i < nums - 1; i++) {
+
+    // Spaces
+    for (let j = 0; j < i + 1; j++) {
+      result += ' ';
+    }
+    // Characters
+    for (let k = 0; k < (nums - 2 - i) * 2 + 1; k++) {
+      result += 'X';
+    }
+
+    // Append a new line
+    result += '\n';
+  }
+
+  return result;
+}
+
+console.log(pyramid(5));
+
+
+
 // Reversed hollow pyramid
 //#region ---------------------------------------------------------------
 function reverseHollowPyramid(nums) {
@@ -140,6 +185,7 @@ console.log(reverseHollowPyramid(5))
 //#endregion
 
 
+
 // Pyramid -> (i = 0) 
 //#region ---------------------------------------------------------------
 
@@ -175,6 +221,7 @@ console.log(pyramid(5));
 console.log(pyramid(9));
 
 //#endregion
+
 
 
 // Pyramid -> (i = 1)
@@ -242,6 +289,7 @@ console.log(pyramid(9));
 // Return 'result'
 
 //#endregion
+
 
 
 // Downward Triangle
